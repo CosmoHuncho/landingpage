@@ -1,1 +1,2 @@
 # landingpage
+This landing page is a project for TOP (The Odin Project) and it will serve to demonstrate my knowledge on building websites. For this project, I will be displaying my skills using flexbox and other features of CSS to create an efficient and well excuted website.
