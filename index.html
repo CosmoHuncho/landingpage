@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <style>
+
+        @import 'meyer-reset.css';
+
+        /*Setup*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        picture {
+            display: block;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        a {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        p a, li a {
+            display: inline-block;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        /*Structure*/
+
+
+        section { 
+            border: none;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            border: 10px solid black;
+            min-height: 100vh;
+        }
+
+        main {
+            flex-grow: 1;
+            border: none;
+        }
+
+        inner-column {
+            display: block;
+            padding: 10px;
+            width: 98%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header inner-column {
+            display: inline-block;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        header inner-column h1 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .links {
+            display: inline-block;
+            display: flex;
+            gap: 20px;
+        }
+
+        @media (min-width: 700px){
+            header{
+                flex: 1;
+                flex-direction: row;
+            }
+            header :is(inner-column, .links) {
+                flex-basis: 33%;
+            }
+        }
+
+        .button {
+            border-radius: 15px;
+            display: inline-block;
+            background: #3882F6;
+            color: white;
+            font-size: 1.2em;
+            padding: .6em 1em;
+        }
+
+        welcomediv {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 10px 20px;
+        }
+
+        welcomediv text-content{
+            display: block;
+        }
+
+        welcomediv text-content p{
+            margin-top: 10px;
+        }
+
+        welcomediv text-content h1{
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        welcomediv text-content .button{
+            margin-top: 10px;
+            font-style: sans-serif;
+            font-size: 20px;
+        }
+
+        welcomediv picture{
+        }
+
+        @media (min-width: 700px){
+            welcomediv{
+                flex: 1;
+                flex-direction: row-reverse;
+            }
+            welcomediv :is(text-content, picture) {
+                flex-basis: 50%;
+            }
+        }
+
+        header, footer {
+            padding: 10px 20px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /*border: 4px solid green;*/
+            gap: 20px;
+        }
+
+        li {
+            width: 100px;
+            height: 100px;
+        }
+
+        .welcome {
+            /*background-color: #1F2937;*/
+            color: white;
+        }
+
+        .products {
+            /*background-color: white;*/
+        }
+
+        .call {
+            display: block;
+            /*background-color: #3882F6;*/
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            display: flex;
+        }
+
+    </style>
+</head>
+<body style="background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c3RhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60S');">
+    <header class="welcome">
+        <inner-column>
+            <h1 style="margin-left: 18px;">Huncho's Hub</h1>
+            <div class="links"> 
+                <a href=''>Journals</a>
+                <a href=''>Projects</a>
+                <a href=''>About Me</a>
+            </div>
+        </inner-column>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <inner-column>
+                <welcomediv>
+                    <picture>
+                        <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.6435-9/60275495_2267537889956223_7151729063101464576_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=174925&_nc_ohc=Wg4ze57yB1YAX8LUrA3&_nc_ht=scontent-lax3-1.xx&oh=00_AT9fsE2rjtP8uG1ajVtZPS_vv6PSfrwW_y5d8tllFanVzA&oe=62175254">
+                    </picture>
+
+                    <text-content>
+                        <h1>Welcome to my project website!</h1>
+                        <p>With this project, I am aiming to display my skills with HTML and CSS as well as proficiency using flexbox to structure layouts.</p>
+                        <a class='button' href="#">Learn More!</a>
+                    </text-content>
+                </welcomediv>
+            </inner-column>
+        </section>
+
+        <section>
+            <inner-column>
+                <p style="color: white; text-align: center; margin-left: 18px;">“Michelangelo? You know a lot about him. Life’s work, political aspirations. Him and the pope. Sexual orientation. The whole works, right? I bet you can’t tell me what it smells like in the Sistine Chapel. You never actually stood there and looked up at that beautiful ceiling. Seeing that. If I ask you about women, you’ll probably give me a syllabus of your personal favorites. You may have even been laid a few times. But you can’t tell me what it feels like to wake up next to a woman and feel truly happy. You’re a tough kid. I ask you about war, you’d probably throw Shakespeare at me, right? ‘Once more into the breach, dear friends.’ But you’ve never been near one. You’ve never held your best friend’s head in your lap and watch him gasp his last breath, lookin’ to you for help. If I asked you about love, you’d probably quote me a sonnet, but you’ve never looked at a woman and been totally vulnerable. Known someone that could level you with her eyes. Feelin’ like God put an angel on Earth just for you, who could rescue you from the depths of hell. And you wouldn’t know what it’s like to be her angel, to have that love for her be there forever. Through anything. Through cancer. And you wouldn’t know about sleepin’ sittin’ up in a hospital room for two months, holding her hand, because the doctors could see in your eyes — that the terms ‘visiting hours’ don’t apply to you. You don’t know about real loss, ’cause that only occurs when you love something more than you love yourself. I doubt you’ve ever dared to love anybody that much.” — Sean</p>
+            </inner-column>
+        </section>
+
+        <section>
+            <inner-column>
+                <h1 style='color: white; margin-left: 18px'></h1>
+                <ul> 
+                    <li><img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png"></li>
+                    <li><img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png"></li>
+                    <li><img src="https://pnggrid.com/wp-content/uploads/2021/07/Twitter-Logo-Square.png"></li>
+                </ul>
+            </inner-column>
+        </section>
+
+        <section class="call">
+            <inner-column>
+                <h1 style="text-align: center;"></h1>
+            </inner-column>
+        </section>
+
+    </main>
+
+    <footer class="welcome">
+        <inner-column>
+            <center><h1>Huncho's Hub Est. 2022</h1></center>
+        </inner-column>
+    </footer>
+   
+</body>
+</html>
